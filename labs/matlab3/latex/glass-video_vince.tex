@@ -1,0 +1,140 @@
+%\right) %\documentclass[conference]{IEEEtran}
+%\documentclass[10pt, conference, letterpaper]{IEEEtran}
+\documentclass[conference]{IEEEtran}
+
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage[noend]{algorithmic}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{comment}
+\usepackage[strings]{underscore}
+\usepackage{comment}
+\usepackage{url}
+
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\setlength{\parskip}{0.1em}
+\renewcommand{\baselinestretch}{1}
+
+\begin{document}
+%IEEE WoWMoM 2015
+%June 14-17, 2015, Boston, MA, USA
+%IEEE International Symposium on a World of Wireless, Mobile and Multimedia Networks
+%Abstract submission deadline: November 21, 2014
+%Full manuscript due: November 28, 2014
+%Acceptance notification: March 13, 2015
+
+\title{Building Efficient Wearable Camera Systems for Public Safety Surveillance}
+\author{\IEEEauthorblockN{xxxx}
+\IEEEauthorblockA{
+Department of Computer \& Information Sciences\\
+Temple University, Philadelphia, PA, USA \\
+Email: \{xxx\}@temple.edu }
+}
+
+\maketitle
+
+%\vspace*{-0.5cm}
+\begin{abstract}
+
+
+\end{abstract}
+
+\section{Introduction}
+- para 1. Cameras fast becoming ubiquitous, e.g. smartphones, glasses. 
+
+- para 2. Uploading images and videos from these devices in real time remains a challenge. Existing wireless network do not have sufficient capacity. Give example, a 10 min, low res. video will take xxx minutes under good conditions.
+
+- para 3. Why this is a problem? Limited network capacity means that we cannot make timely use of captured data because we cannot collect them in real time for analysis. 
+
+- para 4. What do we do? We consider a scenario for wearable cameras. Describe our problem setting
+
+- para 5. Our main contributions are what
+
+- para 6. Rest of the paper is as follows 
+
+\section{Related Work}
+- shoot for about 20-30 citations
+
+\section{Wearable }
+The entire system consists of three major hardware components, two of which are to be local on the body of the user. The two local components consist of a wearable pair of Google Glasses and a Samsung Galaxy Nexus phone both of which run Android Version 4.2.2. The third component consists of a server that will store information sent to it from the phone over wireless.
+
+In every configuration of our system the Google Glass is responsible for recording the video that will then later be processed by OpenCV. The video that is recorded will be then sent to the Android Phone via a configured Ad Hoc 802.11 wireless network hosted on the Android Phone for processing and then ultimately sent via wireless again to the storage server. The specifics about which device video processing takes place depends on the configuration of the system. For example processing can take place only on the phone as seen in figure \ref{fig:generalsystem1} or can be split between the two as seen in figure \ref{fig:generalsystem2}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=3.0in]{./figures/GeneralSystem1.png}
+\caption{Single mode processing.}
+\label{fig:generalsystem1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=3.0in]{./figures/GeneralSystem2.png}
+\caption{Mixed mode processing.}
+\label{fig:generalsystem2}
+\end{figure}
+
+ 
+%- describe our system. Include picture of overview of system design. 
+
+- describe how openCV works on phone
+
+- describe how alternative system designs 
+
+- each of the above is about 2-3 paragraphs. 
+
+\section{Evaluation}
+
+\subsection{Experimental setup}
+Video was captured and analyzed via the Google Glass using the built in camera library. The videos once recorded were stored on the internal storage space located on the Glass and then sent via 802.11 wireless to an Android phone. The Android Phone used in this experiment is the Samsung Galaxy Nexus phone running a stock version of the Android OS. This device was used to host the wireless network, process the video sent to it, and finally to send the results to the database server. Information about each device can be seen in table \ref{table:hardware_specs}.
+
+\begin{table}[h]
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+\textbf{Device} & \textbf{OS} & \textbf{CPU} & \textbf{Memory} & \textbf{Storage} & \textbf{Wireless} \\ \hline
+Google Glass    & 4.2.2       &              &                 &                  &                   \\ \hline
+Nexus Phone     & 4.2.2       &              &                 &                  &                   \\ \hline
+\end{tabular}
+\label{table:hardware_specs}
+\caption{Hardware Specifications}
+\end{table}
+
+Test data consisted of two sets of video recording sessions. The first session was recorded in both sunlit daylight and dusk at a variety of video qualities and settings for the purpose of understanding the video profiles available. Table \ref{table:videoquality} displays information about all of the videos that were recorded. The second set of videos were recorded at 420p and 720p in a crowded outdoor environment during the daytime. These videos were used to in the OpenCV facial analysis portion of the experiment.
+
+\begin{table}[h]
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Glass Video Profile} & \textbf{Video Resolution} & \textbf{Audio Quality} \\ \hline
+Low Quality/QCIF    & 176x144          & fill in       \\ \hline
+CIF                 & 348x288          & fill in       \\ \hline
+420p                & 720x480          & fill in       \\ \hline
+High Quality/720p   & 1280x720         & fill in       \\ \hline
+\end{tabular}
+\label{table:videoquality}
+\caption{Google Glass Video Quality}
+\end{table}
+
+- para 2. How we collect the test data
+
+- para 3. What are our key metrics, and why are they important.
+
+\subsection{Results}
+
+- 1 result/set of graphs per paragraph. 
+
+\section{Conclusion}
+
+{\footnotesize
+\bibliographystyle{IEEEtran}
+\bibliography{glass-video}
+}
+\end{document}
+
+

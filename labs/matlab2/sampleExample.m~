@@ -1,0 +1,16 @@
+clear;
+
+%Define a time vector.
+startTime = -2;
+endTime = 2;
+t = (startTime:1/10:endTime);
+
+%Let us define our continous signal Xc
+Xc_data = t;
+
+for i = 1:numel(t)
+    fprintf('Index:%d Time Value: %d Xc_t Value: %d ',i, t(i), );
+    
+    Xc_data(i) = Xc_t(i)
+end
+
